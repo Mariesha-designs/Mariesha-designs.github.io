@@ -8,78 +8,72 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Navigation Bar -->
     <header>
-        <img src="img/favicon/png" alt="Mariesha Marshall's logo of the letter 'M.'"
-        <h1>Mariesha Marshall</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#projects">Projects</a></li>
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="img/favicon.png" alt="Mariesha Marshall's logo displaying the letter 'M' with a star.">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home.html" class="active">Home</a></li>
                 <li><a href="about.html">About</a></li>
+                <li><a href="resume/MarieshaMarshall_SSC_Accessibility&AssistiveTechnology.pdf" target="_blank">Resume</a></li>
             </ul>
         </nav>
     </header>
 <main>
-    <section id="home">
-        <h2>Hi, I'm Mariesha!</h2>
-        <p>I am passionate about creating accessible web design that deliver memorable and user-friendly experiences for all users. My commitment to inclusive design ensures that accessibility is seamlessly integrated into every digital interaction, empowering everyone, regardless of their abilities.</p>
-        <img src="img/profile pic.png" alt="Mariesha's profile picture of her smiling.">
-        <p>Learn More</p>
+    <!-- Home Section -->
+    <section id="home" class="home-section">
+        <div class="intro">
+            <h1>Hi, I'm Mariesha!</h1>
+            <p>I am passionate about creating accessible web design that deliver memorable and user-friendly experiences for all users. My commitment to inclusive design ensures that accessibility is seamlessly integrated into every digital interaction, empowering everyone, regardless of their abilities.</p>
+            <button class="learn-more">Learn More</button>
+        </div>
+        <img src="img/profile pic.png" alt="Mariesha smiling." class="profile-pic">
     </section>
+
+    <!-- Projects Section -->
     <section id="projects" class="projects-section">
-        <h2>My Work</h2>
-        <article>
-            <img src="img/" alt="Project 1">
-            <h3>Project Name</h3>
-            <h4>HTML and CSS</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
-        </article>
-        <article>
-            <img src="img/" alt="Project 2">
-            <h3>Project Name</h3>
-            <h4>HTML and CSS</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
-        </article>
-        <article>
-            <img src="img/" alt="Project 3">
-            <h3>Project Name</h3>
-            <h4>JavaScript</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
-        </article>
-        <article>
-            <img src="img/" alt="Project 4">
-            <h3>Project Name</h3>
-            <h4>JavaScript</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
-        </article>
-    </div>
-    <section id="archives" class="archives-section">
-        <h2>From the Archives</h2>
-        <article>
-            <img src="img/" alt="Project 5">
-            <h3>Project Name</h3>
-            <h4>UX/UI Design</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
-        </article>
-        <article>
-            <img src="img/" alt="Project 6">
-            <h3>Project Name</h3>
-            <h4>UX/UI Design</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
-        </article>
+        <h2>Projects</h2>
+        <div class="project-grid">
+            <div class="project">
+                <div class="project-image">Project Image</div>
+                <h3>Project Name</h3>
+                <p>Date</p>
+                <p>Brief description about the project.</p>
+            </div>
+            <div class="project">
+                <div class="project-image">Project Image</div>
+                <h3>Project Name</h3>
+                <p>Date</p>
+                <p>Brief description about the project.</p>
+            </div>
+        </div>
     </section>
-    <section id="about">
-        <h2>My Journey</h2>
-        <p>Hello! I’m Mariesha Marshall, an aspiring web designer from Orlando, Florida with a background in Digital Media, with a specialization in Web Design and Social Platforms. Currently, I’m an Online Course Accessibility Assistant. I aspire to create intuitive and accessible digital experiences, utilizing skills in HTML, CSS, JavaScript, and design tools like Figma and Canva. My design philosophy prioritizes accessibility and user experience, which I’ve applied in internships and personal projects, such as [Name a Passion Project]. Outside of coding and design, I enjoy painting and playing video games, which inspire my work and keep my creativity flowing.</p>
-        <h2>Let's Keep In Touch!</h2>
-        <p>LinkedIn</p>
-        <p>Email</p>
+
+    <!-- Creative Vault Section -->
+    <section id="vault" class="vault-section">
+        <h2>Creative Vault</h2>
+        <div class="vault-list">
+            <div class="vault-item">
+                <div class="vault-image">Vault Image</div>
+                <h3>Project Name</h3>
+                <p>Date</p>
+                <p>Short project description here.</p>
+            </div>
+            <div class="vault-item">
+                <div class="vault-image">Vault Image</div>
+                <h3>Project Name</h3>
+                <p>Date</p>
+                <p>Short project description here.</p>
+            </div>
+        </div>
     </section>
-    <a href="#top" id="back-to-top">Back to top</a>
 </main>
+    <!-- Footer -->
     <footer>
         <p>Made with ❤️️ and 💪🏾</p>
-        <p>&copy; 2024 Mariesha Marshall️</p>
+        <p>&copy; 2025 Mariesha Marshall️</p>
     </footer>
 </body>
 </html>
