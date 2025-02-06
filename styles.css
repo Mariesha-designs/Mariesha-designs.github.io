@@ -75,10 +75,37 @@ main {
     font-weight: bold;
 }
 
-/* Home Section Styles */
-.home-section{
-    text-align: center;
-    font-size: 1.5rem;
+/* Centering the Intro Section Horizontally */
+.home-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* Full viewport height */
+    background-color: rgb(255, 255, 255);
+}
+
+/* Aligning Text and Image Side-by-Side */
+.intro {
+    display: flex;
+    align-items: center; /* Vertical alignment */
+    justify-content: space-between; /* Even spacing between text and image */
+    gap: 40px; /* Space between text and image */
+    max-width: 1200px; /* Center content within a max width */
+    padding: 20px; /* Add some padding around the section */
+}
+
+/* Styling for the Intro Text */
+.intro-text {
+    flex: 1;
+    text-align: left;
+    font-size: 20px;
+}
+
+/* Styling for the Image */
+.intro img {
+    flex-shrink: 0;
+    width: 350px; /* Adjust the image size */
+    height: auto;
 }
 
 /* Projects Section Styles */
