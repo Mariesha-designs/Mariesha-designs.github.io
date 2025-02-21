@@ -15,23 +15,23 @@ body {
 
 /* Nameplate Styles */
 .no-underline {
-    text-decoration: none; /* Removes the underline */
-    color: inherit; /* Ensures the link takes the color of the surrounding text (optional) */
+    text-decoration: none;
+    color: inherit;
 }
 
 /* Header Styles */
 .navbar {
-    position: fixed;  
-    top: 0;           
-    left: 0;          
-    width: 100%;      
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
     border-bottom: 1.5px solid rgb(231, 231, 231);
-    background-color: #fff; 
-    z-index: 1000;    
+    background-color: #fff;
+    z-index: 1000;
 }
 
 main {
@@ -48,12 +48,12 @@ main {
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 20px; /* Consistent space between all nav items */
+    gap: 20px;
     font-weight: bold;
 }
 
 .nav-links li {
-    margin-right: 10px; /* Adds space between the nav items */
+    margin-right: 10px;
 }
 
 .nav-links li:last-child {
@@ -64,12 +64,12 @@ main {
     text-decoration: none;
     color: #333;
     font-size: 1rem;
-    transition: transform 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .nav-links a:hover {
-    transform: scale(1.1); /* Makes the text "pulse out" slightly */
-    color: #838383; /* Optional: Change the color on hover */
+    transform: scale(1.1);
+    color: #838383;
     font-weight: bold;
 }
 
@@ -77,109 +77,100 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50vh; /* Full viewport height */
+    height: 50vh;
     background-color: rgb(255, 255, 255);
 }
 
 .intro {
     display: flex;
-    align-items: center; /* Vertical alignment */
-    justify-content: space-between; /* Even spacing between text and image */
-    gap: 40px; /* Space between text and image */
-    max-width: 1200px; /* Center content within a max width */
-    padding: 20px; /* Add some padding around the section */
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1200px;
+    padding: 20px;
 }
-/* Media query for responsiveness (when the screen width is 768px or less) */
-@media screen and (max-width: 768px) {
-    .general-section {
-        grid-template-columns: 1fr; /* Stack the images vertically */
-        width: 100%; /* Make the section full width */
-    }
 
-    /* Ensure images take full width for smaller screens */
-    .general-section img {
-        width: 100%; /* Make images responsive */
-        height: auto; /* Keep aspect ratio intact */
-        max-width: 100%; /* Prevents images from stretching beyond container */
-    }
-}
 /* General Section */
 .general-section {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; /* Two equal columns */
-    grid-template-rows: auto; /* Two rows */
-    gap: 20px; /* Space between elements */
-    text-align: center; /* Centers text inside elements */
-    justify-items: center; /* Centers content horizontally */
-    align-items: center; /* Centers content vertically */
-    width: 80%; /* Adjust width */
-    margin: auto; /* Centers the whole section */
-    font-size: 18px; /* Adjust text size */
-    line-height: 1.6; /* Spacing between lines */
-  }
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.6;
+}
 
 /* Main content area */
 .main-content {
-  width: 80%;
-  margin: 0 auto;
-  padding: 40px 0;
-  text-align: left;
+    width: 80%;
+    margin: 0 auto;
+    padding: 40px 0;
+    text-align: left;
 }
 
 /* Style for each individual section (Group Formation, etc.) */
-.group-formation, 
-.idea-mindmap, 
-.matrix-market, 
-.user-personas, 
-.user-survey, 
-.use-case, 
-.info-arch, 
-.mid-fi, 
-.style-guide, 
-.hi-fi, 
+.group-formation,
+.idea-mindmap,
+.matrix-market,
+.user-personas,
+.user-survey,
+.use-case,
+.info-arch,
+.mid-fi,
+.style-guide,
+.hi-fi,
 .feedback {
-  margin-bottom: 40px;
+    margin-bottom: 40px;
 }
 
 /* Styling the paragraph and header inside each section */
-.group-formation p, 
-.idea-mindmap p, 
-.matrix-market p, 
-.user-personas p, 
-.user-survey p, 
-.use-case p, 
-.info-arch p, 
-.mid-fi p, 
-.style-guide p, 
-.hi-fi p, 
+.group-formation p,
+.idea-mindmap p,
+.matrix-market p,
+.user-personas p,
+.user-survey p,
+.use-case p,
+.info-arch p,
+.mid-fi p,
+.style-guide p,
+.hi-fi p,
 .feedback p {
-  font-size: 18px; /* Adjust text size */
-  line-height: 1.6; /* Spacing between lines */
-  margin-bottom: 20px;
-  text-align: left;
-  color: #444; /* Slightly darker text */
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: left;
+    color: #444;
 }
 
 /* Header (h2) styling */
 h2 {
-  font-size: 24px;
-  font-weight: 600;
-  margin-top: 10px;
-  margin-bottom: 15px;
-  color: #333;
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    color: #333;
 }
-
+.grapefruit-color{
+    color: #F9635C;
+    font-weight: bold;
+}
 /* Style for the <hr> lines */
 hr {
-  width: 80%;
-  margin: 30px auto; /* Centers the line and adds spacing */
-  border: 1px solid #ddd; /* Light grey line */
+    width: 80%;
+    margin: 30px auto;
+    border: 1px solid #ddd;
 }
+
 /* Prevent the header image from bleeding */
 .head-img {
     width: 100%;
-    max-width: 1200px; /* Limits the width to prevent overflow */
-    margin: 0 auto; /* Centers the image horizontally */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* Optional: Add a box-shadow effect to the image */
@@ -187,38 +178,39 @@ hr {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
 }
+
 /* Style for the images inside each section */
 img {
-    display: block; /* Ensures the image is treated as a block element */
-    margin: 0 auto; /* Centers the image horizontally */
-    max-width: 100%; /* Ensures the image is responsive */
-    height: auto; /* Maintains the aspect ratio */
-    border-radius: 10px; /* Rounded corners */
-    border: 2px solid #ddd; /* Light border around images */
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #ddd;
     margin-top: 20px;
-  }
-  
-  /* Add a shadow effect to images on hover */
+}
+
+/* Add a shadow effect to images on hover */
 img:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
-  }
-  
+}
+
 .adobe-link {
     font-size: 18px; /* Adjust text size */
     line-height: 1.6; /* Spacing between lines */
     text-align: center;
 }
 
-/*Two Containers*/
+/* Two Containers */
 .two-content-img {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns */
-    grid-template-rows: auto; /* Two rows */
-    justify-items: center; /* Center the images horizontally */
-    gap: 20px; /* Space between images */
-    width: 100%; /* Adjust width if needed */
-    margin: 0 auto; /* Center the whole grid container */
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    justify-items: center;
+    gap: 20px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 /* General image styling */
@@ -226,22 +218,23 @@ img:hover {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
-    border: 2px solid #ddd; /* Optional: border for images */
+    border: 2px solid #ddd;
 }
-/*Three Containers*/
+
+/* Three Containers */
 .three-content-img {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns */
-    grid-template-rows: auto auto; /* Two rows */
-    justify-items: center; /* Center the images horizontally */
-    gap: 20px; /* Space between images */
-    width: 100%; /* Adjust width if needed */
-    margin: 0 auto; /* Center the whole grid container */
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    justify-items: center;
+    gap: 20px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 /* For the last item, which will go in the bottom row */
 .three-content-img img:last-child {
-    grid-column: span 2; /* Make the last image span across both columns */
+    grid-column: span 2;
 }
 
 /* General image styling */
@@ -249,38 +242,65 @@ img:hover {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
-    border: 2px solid #ddd; /* Optional: border for images */
+    border: 2px solid #ddd;
 }
+
 /* Footer Styles */
 footer {
-    display: flex; /* Enable flexbox for layout */
-    flex-direction: column; /* Stack main content vertically */
-    align-items: center; /* Center items horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     border-top: 1px solid #ddd;
     padding: 10px;
-    background-color: #fff; /* Optional: Add a background color for contrast */
+    background-color: #fff;
 }
 
 footer .footer-links {
-    display: flex; /* Arrange links horizontally */
-    gap: 15px; /* Space between the links */
-    margin-top: 5px; /* Add spacing above the links */
+    display: flex;
+    gap: 15px;
+    margin-top: 5px;
 }
 
 footer a {
-    text-decoration: none; /* Removes underline */
-    color: #000; /* Black text */
-    font-weight: bold; /* Optional: Make it bold for emphasis */
-    transition: transform 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 footer a:hover {
-    color: #838383; /* Change color on hover */
-    transform: scale(1.1); /* Slight zoom on hover */
+    color: #838383;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 footer p {
-    margin-top: 10px; /* Add spacing above the copyright text */
-    color: #666; /* Optional: lighter text for copyright */
-    font-size: 0.9rem; /* Smaller font for the copyright line */
+    margin-top: 10px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Media Queries for Mobile Devices */
+@media screen and (max-width: 768px) {
+    /* General Section - Stack items vertically */
+    .general-section {
+        display: flex;
+        flex-direction: column; /* Stack images vertically */
+        gap: 20px; /* Space between images */
+        width: 100%; /* Full width */
+        padding: 10px; /* Padding for mobile devices */
+    }
+
+    /* Remove grid layout from two-container and three-container image sections */
+    .two-content-img, .three-content-img {
+        display: flex;
+        flex-direction: column; /* Stack images vertically */
+        gap: 20px; /* Space between images */
+    }
+
+    /* Style for images to ensure responsiveness */
+    .two-content-img img, .three-content-img img {
+        max-width: 100%; /* Ensure images are responsive */
+        height: auto;
+        margin: 10px auto; /* Center the images */
+    }
 }

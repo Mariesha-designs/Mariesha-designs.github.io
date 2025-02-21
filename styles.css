@@ -15,23 +15,23 @@ body {
 
 /* Nameplate Styles */
 .no-underline {
-    text-decoration: none; /* Removes the underline */
-    color: inherit; /* Ensures the link takes the color of the surrounding text (optional) */
+    text-decoration: none;
+    color: inherit;
 }
 
 /* Header Styles */
 .navbar {
-    position: fixed;  
-    top: 0;           
-    left: 0;          
-    width: 100%;      
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
     border-bottom: 1.5px solid rgb(231, 231, 231);
-    background-color: #fff; 
-    z-index: 1000;    
+    background-color: #fff;
+    z-index: 1000;
 }
 
 main {
@@ -48,13 +48,13 @@ main {
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 20px; /* Consistent space between all nav items */
+    gap: 20px;
     font-weight: bold;
 }
 
 /* Add margin to each navigation item */
 .nav-links li {
-    margin-right: 10px; /* Adds space between the nav items */
+    margin-right: 10px;
 }
 
 /* Remove margin from the last item */
@@ -66,46 +66,71 @@ main {
     text-decoration: none;
     color: #333;
     font-size: 1rem;
-    transition: transform 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .nav-links a:hover {
-    transform: scale(1.1); /* Makes the text "pulse out" slightly */
-    color: #838383; /* Optional: Change the color on hover */
+    transform: scale(1.1);
+    color: #838383;
     font-weight: bold;
 }
 
-/* Centering the Intro Section Horizontally */
+/* Home Section - Responsive */
 .home-section {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50vh; /* Full viewport height */
+    height: auto;
+    padding: 60px 20px;
     background-color: rgb(255, 255, 255);
 }
 
-/* Aligning Text and Image Side-by-Side */
+/* Intro Section - Flexbox & Responsiveness */
 .intro {
     display: flex;
-    align-items: center; /* Vertical alignment */
-    justify-content: space-between; /* Even spacing between text and image */
-    gap: 40px; /* Space between text and image */
-    max-width: 1200px; /* Center content within a max width */
-    padding: 20px; /* Add some padding around the section */
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+    flex-wrap: wrap;
 }
 
-/* Styling for the Intro Text */
+/* Responsive Text */
 .intro-text {
     flex: 1;
     text-align: left;
     font-size: 20px;
+    min-width: 280px;
 }
 
-/* Styling for the Image */
+/* Responsive Image */
 .intro img {
     flex-shrink: 0;
-    width: 350px; /* Adjust the image size */
+    width: 350px;
     height: auto;
+    max-width: 100%;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    .intro {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .intro-text {
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .intro img {
+        width: 80%;
+        max-width: 300px;
+    }
 }
 
 /* Projects Section Styles */
@@ -121,24 +146,30 @@ main {
 
 .project-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns of equal width */
-    grid-template-rows: repeat(2, auto);  /* 2 rows, height adjusts to content */
-    gap: 20px; /* Adds space between rows and columns */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 20px;
 }
 
 @media (max-width: 768px) {
     .project-container {
-        grid-template-columns: 1fr; /* Single column */
-        grid-template-rows: none;  /* Rows adjust automatically */
+        grid-template-columns: 1fr;
     }
 }
 
+/* Project Item Styles */
 .project-item {
     background: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+.project-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .project-item img {
@@ -165,55 +196,48 @@ main {
 /* Creative Hub Styles */
 .hub-section {
     padding: 40px 20px;
-    display: flex; /* Use flexbox to center the grid */
-    flex-direction: column; /* Stack content vertically */
-    align-items: center; /* Center horizontally */
-    justify-content: center; /* Center vertically */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    min-height: 100vh; /* Ensure it takes full viewport height */
+    min-height: 100vh;
 }
 
 .hub-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Adjust columns */
-    grid-template-rows: auto; /* Automatically adjust row height */
-    gap: 20px; /* Space between rows and columns */
-    justify-content: center; /* Centers grid items horizontally */
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+    justify-content: center;
 }
 
 .hub-item {
     position: relative;
     max-width: 400px;
     text-align: left;
-    margin: auto; /* Centers each item */
-}
-
-/* Hub Section Styles */
-.hub-item {
-    position: relative;
-    max-width: 400px; /* Adjust width as needed */
-    margin: auto; /* Center each item */
+    margin: auto;
 }
 
 .hub-image {
     position: relative;
     width: 100%;
-    height: 400px; /* Increased height for larger images */
+    height: 400px;
     overflow: hidden;
-    border-radius: 15px; /* Slightly rounded corners */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .hub-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Crop the image to fit the container */
-    transition: transform 0.3s ease, opacity 0.3s ease; /* Add smooth transition */
+    object-fit: cover;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .hub-image:hover img {
-    transform: scale(1.05); /* Slight zoom on hover */
-    opacity: 0.7; /* Light "white-out" effect */
+    transform: scale(1.05);
+    opacity: 0.7;
 }
 
 /* Overlay for Image Name */
@@ -223,60 +247,25 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.5); /* Light white overlay */
-    opacity: 0; /* Start hidden */
+    background-color: rgba(255, 255, 255, 0.5);
+    opacity: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 15px; /* Match the image border radius */
+    border-radius: 15px;
     transition: opacity 0.3s ease;
 }
 
 .hub-image:hover .image-overlay {
-    opacity: 1; /* Show overlay on hover */
+    opacity: 1;
 }
 
 .image-overlay span {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #333; /* Text color */
+    color: #333;
     text-align: center;
-    padding: 0 10px; /* Optional: Padding for better readability */
-}
-
-/* Grid Adjustments for Larger Images */
-.hub-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Keep 2 columns */
-    gap: 40px; /* Increase gap for better spacing between items */
-    justify-content: center; /* Ensure grid items are centered */
-}
-
-@media (max-width: 768px) {
-    .hub-container {
-        grid-template-columns: 1fr; /* Single column on smaller screens */
-    }
-    .hub-image {
-        height: 300px; /* Adjust height for smaller screens */
-    }
-}
-
-/* Layered Effect */
-.image-layer {
-    position: relative;
-}
-
-.image-layer::before {
-    content: "";
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.3);
-    z-index: -1;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 0 10px;
 }
 
 /* About Section */
@@ -288,7 +277,7 @@ main {
 .about-content {
     display: flex;
     flex-wrap: wrap;
-    gap: 50px; /* Adds space between image and text */
+    gap: 50px;
     align-items: center;
     justify-content: center;
 }
@@ -309,7 +298,7 @@ main {
     flex: 1;
     max-width: 350px;
     text-align: center;
-    margin-left: 20px; /* Optional: Additional margin if needed */
+    margin-left: 20px;
 }
 
 .image-content img {
@@ -319,18 +308,11 @@ main {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.skills-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Keep 2 columns */
-    gap: 10px; /* Increase gap for better spacing between items */
-}
-
-/* Responsive Design for About Section */
 @media (max-width: 768px) {
     .about-content {
         flex-direction: column;
         align-items: center;
-        gap: 30px; /* Adjust gap for smaller screens */
+        gap: 30px;
     }
 
     .text-content {
@@ -345,34 +327,34 @@ main {
 
 /* Footer Styles */
 footer {
-    display: flex; /* Enable flexbox for layout */
-    flex-direction: column; /* Stack main content vertically */
-    align-items: center; /* Center items horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     border-top: 1px solid #ddd;
     padding: 10px;
-    background-color: #fff; /* Optional: Add a background color for contrast */
+    background-color: #fff;
 }
 
 footer .footer-links {
-    display: flex; /* Arrange links horizontally */
-    gap: 15px; /* Space between the links */
-    margin-top: 5px; /* Add spacing above the links */
+    display: flex;
+    gap: 15px;
+    margin-top: 5px;
 }
 
 footer a {
-    text-decoration: none; /* Removes underline */
-    color: #000; /* Black text */
-    font-weight: bold; /* Optional: Make it bold for emphasis */
-    transition: transform 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 footer a:hover {
-    color: #838383; /* Change color on hover */
-    transform: scale(1.1); /* Slight zoom on hover */
+    color: #838383;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 footer p {
-    margin-top: 10px; /* Add spacing above the copyright text */
-    color: #666; /* Optional: lighter text for copyright */
-    font-size: 0.9rem; /* Smaller font for the copyright line */
+    margin-top: 10px;
+    color: #666;
+    font-size: 0.9rem;
 }
